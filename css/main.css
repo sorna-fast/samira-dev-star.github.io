@@ -24,24 +24,25 @@ body {
 }
 
 .orbit {
-  width: 100%;
-  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .orbit-image {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 120px;
+  width: 120px;  /* Größe des inneren Rings */
   height: 120px;
   border-radius: 50%;
   transform: translate(-50%, -50%);
   object-fit: cover;
   z-index: 10;
 }
+
 
 .nav {
   position: sticky; top: 0; backdrop-filter: blur(8px);
@@ -110,7 +111,9 @@ body {
 .socials { max-width: 600px; margin: 16px auto 0; display: flex; gap: 12px }
 .footer { border-top: 1px solid var(--border); padding: 20px; text-align: center; color: var(--muted) }
 
+/* ریسپانسیو */
 @media (max-width: 900px) {
   .hero { grid-template-columns: 1fr; }
   .cards > .card { grid-template-columns: 1fr; }
 }
+
