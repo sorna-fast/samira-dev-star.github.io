@@ -18,27 +18,30 @@ body {
 
 .orbit-container {
   position: relative;
-  width: 200px;   /* همان اندازه viewBox */
+  width: 200px;
   height: 200px;
-  margin: auto;   /* وسط صفحه */
+  margin: auto;
 }
 
 .orbit {
   width: 100%;
   height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .orbit-image {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 80px;    /* اندازه تصویر */
-  height: 80px;
-  border-radius: 50%; /* گرد کردن عکس */
-  transform: translate(-50%, -50%); /* دقیقاً وسط */
-  object-fit: cover; /* تناسب تصویر */
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 10;
 }
-
 
 .nav {
   position: sticky; top: 0; backdrop-filter: blur(8px);
@@ -107,9 +110,7 @@ body {
 .socials { max-width: 600px; margin: 16px auto 0; display: flex; gap: 12px }
 .footer { border-top: 1px solid var(--border); padding: 20px; text-align: center; color: var(--muted) }
 
-/* ریسپانسیو */
 @media (max-width: 900px) {
   .hero { grid-template-columns: 1fr; }
   .cards > .card { grid-template-columns: 1fr; }
 }
-
