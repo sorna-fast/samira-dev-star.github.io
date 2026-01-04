@@ -56,7 +56,27 @@ body {
     object-fit: cover;
     z-index: 10;
 }
+/* ----------------------------------------------------- */
+.more-btn-container {
+  text-align: center;
+  margin-top: 24px;
+}
 
+.more-btn-container .btn {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 8px;
+  background: var(--primary);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.more-btn-container .btn:hover {
+  background: #5a3fd9; /* کمی تیره‌تر از رنگ اصلی */
+}
+/* ----------------------------------------------------- */
 .nav {
   position: sticky; top: 0; backdrop-filter: blur(8px);
   background: rgba(14,15,19,.6); border-bottom: 1px solid var(--border);
