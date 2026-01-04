@@ -109,6 +109,80 @@ body {
   object-fit: cover;
 }
 /* ----------------------------------------------------- */
+/* certificates */
+.section {
+  padding: 2rem;
+  background-color: #f4f6f8;
+  color: #1e293b;
+}
+
+.section__head h2 {
+  color: #0f766e;
+}
+
+.cert-filter {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.filter-btn {
+  background-color: #e0f2f1;
+  color: #0f766e;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.filter-btn.active {
+  background-color: #0f766e;
+  color: #ffffff;
+}
+
+.cert-carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  scroll-behavior: smooth;
+  padding-bottom: 1rem;
+}
+
+.cert-card {
+  min-width: 250px;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+}
+
+.cert-card img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.cert-controls {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.cert-controls .btn {
+  background-color: #0f766e;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cert-controls .view-all {
+  background-color: #64748b;
+}
+/* ----------------------------------------------------- */
 .nav {
   position: sticky; top: 0; backdrop-filter: blur(8px);
   background: rgba(14,15,19,.6); border-bottom: 1px solid var(--border);

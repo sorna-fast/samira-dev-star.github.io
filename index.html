@@ -232,24 +232,45 @@
     </div>
   </section>
 
+  <!-- ----------------------------------------------------------------------------------- -->
+
   <section id="certs" class="section">
-    <div class="section__head">
-      <h2>Zertifikate & Nachweise</h2>
-      <p>Offizielle Zertifikate, Kurse und Erfolge.</p>
+  <div class="section__head">
+    <h2>Zertifikate & Nachweise</h2>
+    <p>Offizielle Zertifikate, Kurse und Erfolge.</p>
+  </div>
+
+  <div class="cert-filter">
+    <button class="filter-btn active">Alle Zertifikate</button>
+    <button class="filter-btn">LinkedIn</button>
+    <button class="filter-btn">Harvard</button>
+    <!-- Add more filters as needed -->
+  </div>
+
+  <div class="cert-carousel">
+    <div class="cert-card" data-platform="LinkedIn">
+      <img src="images/cert1-preview.png" alt="Data Analytics Zertifikat">
+      <h3>Data Analytics</h3>
+      <p>LinkedIn Learning</p>
+      <a href="images/cert1.pdf" target="_blank" class="btn tiny">PDF ansehen</a>
     </div>
-    <div class="timeline">
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-content">
-          <h3>Fortgeschrittene Webentwicklung</h3>
-          <p>Inhalt + Bestätigungslink.</p>
-          <a class="btn tiny" href="images/cert-advanced.pdf" target="_blank" rel="noopener">PDF ansehen</a>
-        </div>
-        <div class="tl-date">2025</div>
-      </div>
-      <!-- Weitere Einträge -->
+    <div class="cert-card" data-platform="LinkedIn">
+      <img src="images/cert2-preview.png" alt="Career Skills Zertifikat">
+      <h3>Career Skills</h3>
+      <p>LinkedIn Learning</p>
+      <a href="images/cert2.pdf" target="_blank" class="btn tiny">PDF ansehen</a>
     </div>
-  </section>
+    <!-- Add more cards -->
+  </div>
+
+  <div class="cert-controls">
+    <button class="btn play">Play</button>
+    <button class="btn slow">Slow Down</button>
+    <a href="https://github.com/yourprofile/certificates" class="btn view-all" target="_blank">Alle Zertifikate auf GitHub →</a>
+  </div>
+</section>
+
+<!-- ------------------------------------------------------------------------------------- -->
 
   <section id="contact" class="section alt">
     <div class="section__head">
