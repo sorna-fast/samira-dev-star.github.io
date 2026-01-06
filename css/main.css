@@ -2436,3 +2436,257 @@ a {
     font-size: 1rem;
   }
 }
+
+/* ==================== فیکس بخش Hero - جلوگیری از همپوشانی ==================== */
+
+/* استایل پایه برای محتوای hero */
+.hero__content {
+  position: relative;
+  z-index: 5;
+  /* محتوا بالاتر از orbit */
+  padding-bottom: 40px;
+  /* فاصله اضافی برای جلوگیری از همپوشانی */
+}
+
+/* استایل پایه برای orbit */
+.hero__orbit {
+  position: relative;
+  z-index: 1;
+  /* orbit پشت محتوا */
+  width: 280px;
+  height: 280px;
+  margin: 0 auto;
+}
+
+/* فیکس عکس شخصی - کوچک و قابل کنترل */
+.imgp {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150%;
+  height: 250%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 2;
+  border: 3px solid var(--primary);
+  box-shadow: 0 0 30px rgba(169, 51, 255, 0.4);
+  pointer-events: none;
+  /* جلوگیری از تداخل با کلیک */
+}
+
+/* فیکس دکمه‌ها - همیشه بالاتر از بقیه */
+.hero__cta {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 24px;
+}
+
+.btn {
+  position: relative;
+  z-index: 15;
+}
+
+/* ==================== ریسپانسیو ==================== */
+
+@media (max-width: 992px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    min-height: auto;
+    padding: 60px 20px;
+    gap: 80px;
+    /* فاصله زیاد بین محتوا و عکس */
+  }
+
+  .hero__content {
+    padding-bottom: 0;
+  }
+
+  /* دکمه‌ها در مرکز */
+  .hero__cta {
+    justify-content: center;
+  }
+
+  /* کاهش سایز عکس برای جلوگیری از همپوشانی */
+  .hero__orbit {
+    width: 220px;
+    height: 220px;
+  }
+
+  .imgp {
+    width: 120%;
+    height: 120%;
+    z-index: 1;
+    /* عکس کاملاً پشت محتوا */
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    padding: 40px 20px;
+    gap: 60px;
+  }
+
+  .hero__orbit {
+    width: 180px;
+    height: 180px;
+  }
+
+  .imgp {
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero__cta {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 375px) {
+  .hero {
+    padding: 30px 15px;
+    gap: 40px;
+  }
+
+  .hero__orbit {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* ==================== بخش HERO ساده ==================== */
+.hero {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 5;
+}
+
+.hero__name {
+  font-size: clamp(22px, 3vw, 32px);
+  color: var(--muted);
+  margin: 0 0 12px;
+  font-weight: 600;
+}
+
+.hero__content h1 {
+  font-size: clamp(32px, 5vw, 56px);
+  margin: 0 0 16px;
+  line-height: 1.2;
+}
+
+.hero__content p {
+  color: var(--muted);
+  margin: 0 0 24px;
+  font-size: clamp(16px, 2vw, 20px);
+}
+
+.hero__cta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+/* ==================== بخش ÜBER MICH جدید ==================== */
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 48px;
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.about-main-text,
+.about-secondary-text {
+  color: var(--text);
+  line-height: 1.8;
+}
+
+.about-photo {
+  position: sticky;
+  top: 120px;
+  /* زیر منوی sticky */
+}
+
+.personal-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  border: 3px solid var(--primary);
+  box-shadow: 0 4px 25px rgba(169, 51, 255, 0.3);
+  transition: var(--transition);
+}
+
+.personal-photo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 35px rgba(169, 51, 255, 0.5);
+}
+
+/* ==================== ریسپانسیو برای ÜBER MICH ==================== */
+@media (max-width: 992px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .about-photo {
+    position: static;
+    text-align: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 60px;
+  }
+
+  .personal-photo {
+    max-width: 100%;
+    
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    padding: 60px 20px;
+    min-height: 60vh;
+  }
+
+  .hero__cta {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 280px;
+  }
+}
