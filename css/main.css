@@ -260,3 +260,9 @@ body {
   .cards > .card { grid-template-columns: 1fr; }
 }
 
+.hero__name {
+  font-size: clamp(20px, 3vw, 28px);
+  color: var(--muted);
+  margin: 8px 0 12px;
+  font-weight: 600;
+}
