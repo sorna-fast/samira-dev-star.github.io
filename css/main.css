@@ -1540,3 +1540,339 @@ a {
     gap: 20px;
   }
 }
+
+/* ==================== بخش Kontakt 2024 - با شماره تماس و تلگرام ==================== */
+#contact.section.alt {
+  background: var(--bg-alt);
+  position: relative;
+  overflow: hidden;
+  padding: 80px 20px;
+}
+
+#contact.section.alt::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-topbar);
+  animation: gradientFlow 3s ease infinite;
+}
+
+#contact .section__head {
+  margin-bottom: 56px;
+}
+
+#contact .section__head h2 {
+  color: var(--primary);
+  font-size: clamp(28px, 4vw, 40px);
+  margin-bottom: 16px;
+  position: relative;
+}
+
+#contact .section__head h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--gradient-primary);
+  border-radius: 2px;
+}
+
+#contact .section__head p {
+  color: var(--muted);
+  font-size: clamp(16px, 2vw, 18px);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* دکمه‌های شبکه اجتماعی */
+.socials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px 24px;
+  background: rgba(169, 51, 255, 0.1);
+  border: 1px solid rgba(169, 51, 255, 0.3);
+  border-radius: 12px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(5px);
+}
+
+.socials a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.6s ease;
+}
+
+.socials a:hover::before {
+  left: 100%;
+}
+
+.socials a:hover {
+  background: rgba(169, 51, 255, 0.2);
+  border-color: var(--primary);
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(169, 51, 255, 0.3);
+}
+
+.socials a svg {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.socials a:hover svg {
+  transform: scale(1.2);
+  fill: var(--ring);
+}
+
+.socials a span {
+  color: var(--text);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.socials a:hover span {
+  color: var(--ring);
+}
+
+/* رنگ‌های برند برای هر پلتفرم */
+.socials a[href*="github"] svg {
+  fill: #fff;
+}
+
+.socials a[href*="linkedin"] svg {
+  fill: #0077b5;
+}
+
+.socials a[href*="mailto"] svg {
+  fill: #ea4335;
+}
+
+.socials a[href*="tel"] svg {
+  fill: #25d366;
+}
+
+/* WhatsApp green */
+.socials a[href*="t.me"] svg {
+  fill: #0088cc;
+}
+
+/* Telegram blue */
+
+/* ریسپانسیو */
+@media (max-width: 768px) {
+  .socials {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 16px;
+  }
+
+  .socials a {
+    padding: 14px 20px;
+    gap: 10px;
+  }
+
+  .socials a svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .socials a span {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #contact.section.alt {
+    padding: 60px 20px;
+  }
+
+  .socials {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .socials a {
+    justify-content: flex-start;
+    padding: 16px 24px;
+  }
+}
+
+
+/* ==================== بخش Kontakt 2024 - نسخه حرفه‌ای ==================== */
+#contact.section.alt {
+  background: var(--bg-alt);
+  position: relative;
+  overflow: hidden;
+}
+
+#contact.section.alt::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-topbar);
+  animation: gradientFlow 3s ease infinite;
+}
+
+#contact .section__head {
+  margin-bottom: 56px;
+}
+
+#contact .section__head h2 {
+  color: var(--primary);
+  font-size: clamp(28px, 4vw, 40px);
+  margin-bottom: 16px;
+  position: relative;
+}
+
+#contact .section__head h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--gradient-primary);
+  border-radius: 2px;
+}
+
+#contact .section__head p {
+  color: var(--muted);
+  font-size: clamp(16px, 2vw, 18px);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* دکمه‌های شبکه اجتماعی */
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.socials a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 32px;
+  background: rgba(169, 51, 255, 0.1);
+  border: 1px solid rgba(169, 51, 255, 0.3);
+  border-radius: 12px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(5px);
+}
+
+.socials a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.6s ease;
+}
+
+.socials a:hover::before {
+  left: 100%;
+}
+
+.socials a:hover {
+  background: rgba(169, 51, 255, 0.2);
+  border-color: var(--primary);
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(169, 51, 255, 0.3);
+}
+
+.socials a svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--primary);
+  transition: fill 0.3s ease;
+}
+
+.socials a:hover svg {
+  fill: var(--ring);
+}
+
+.socials a span {
+  color: var(--text);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.socials a:hover span {
+  color: var(--ring);
+}
+
+/* ریسپانسیو */
+@media (max-width: 768px) {
+  .socials {
+    gap: 16px;
+  }
+
+  .socials a {
+    padding: 14px 24px;
+    gap: 10px;
+  }
+
+  .socials a svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .socials a span {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .socials {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .socials a {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+  }
+}
